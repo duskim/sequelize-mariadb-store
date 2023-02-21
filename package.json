@@ -17,5 +17,8 @@
   ],
   "author": "du kim",
   "license": "MIT",
-  "dependencies": {}
+  "devDependencies": {
+    "@sequelize/core": "^7.0.0-alpha.10",
+    "sequelize": "^6.28.0"
+  }
 }
