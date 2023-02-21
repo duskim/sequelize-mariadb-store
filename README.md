@@ -7,7 +7,7 @@ Session store for express-session and sequelize.js. Only tested on maria-db.
 ### Usage
 
     const session = require("express-session");
-    const SessionStore = require("express-session-store-mariadb")(session);
+    const SessionStore = require("@duskim/express-store")(session);
 
     //initialize new store with sequelize
     const sessionStore = new SessionStore({
