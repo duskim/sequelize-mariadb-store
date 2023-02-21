@@ -1,0 +1,21 @@
+{
+  "name": "@duskim/express-store",
+  "version": "0.0.6",
+  "description": "express session store for sequelize/mariadb",
+  "main": "express-session-store.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mariadb",
+    "sequelize",
+    "express-session",
+    "session-store"
+  ],
+  "author": "du kim",
+  "license": "MIT",
+  "dependencies": {}
+}
