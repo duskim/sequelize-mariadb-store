@@ -1,44 +1,61 @@
-## express-session-store-mariadb
+# @duskim/express-store
 
-### Description
+## Description
 
-Session store for express-session and sequelize.js. Only tested on maria-db.
+ES6-module MariaDB session storage plugin for [express-session](https://www.npmjs.com/package/express-session). Written in TypeScript and transcompiled to .cjs.
 
-### Usage
+## Vitest report
 
-    const session = require("express-session");
-    const SessionStore = require("express-session-store-mariadb")(session);
+To reproduce these results, please install MariaDB, create a database called 'test' and run
+```
+npm run test
+```
 
-    //initialize new store with sequelize
-    const sessionStore = new SessionStore({
-      client: sequelize
-    });
+```
+ ✓ src/main.vitest.js (10) 4564ms
+   ✓ test store methods (10) 4564ms
+     ✓ all
+     ✓ destroy
+     ✓ set with expiry
+     ✓ set with no expiry
+     ✓ get existing
+     ✓ get non-existing
+     ✓ clear
+     ✓ length
+     ✓ touch
+     ✓ clears expired sessions 4031ms
 
-    router.use(
-      session({
-        // session options
-        store: sessionStore,
+ Test Files  1 passed (1)
+      Tests  10 passed (10)
+   Start at  19:56:02
+   Duration  5.43s (transform 100ms, setup 0ms, collect 223ms, tests 4.56s)
+```
 
-        secret: "keyboard cat",
-        resave: false, //
-        saveUninitialized: false,
-        cookie: {
-          secure: false,
-          httpOnly: true,
-          sameSite: "strict",
-          // expires: new Date(Date.now() + hour),
-          maxAge: 60 * 1000,
-        },
-        rolling: true,
-      })
-    );
+## Usage
+Supports ES6-module or CJS modules
+```
+  import expressSession from "express-session"
+  import MariaDBSessionStorage from "@duskim/express-store"
+  
+  const sessStore = new MariaDBSessionStorage({
+    client: sequelize
+  });
 
-### Implemented Methods
+  app.use(
+    session({
+      store: sessStore,
+      ...
+    })
+  );
+```
 
-- req.session.touch(). you can set resave to false.
-- sessionStore.length()
-- sessionStore.clear()
-- sessionStore.set()
-- sessionStore.get()
-- sessionStore.destroy()
-- sessionStore.clear()
+## Implemented Methods
+Please see [express-session](https://www.npmjs.com/package/express-session) for a description of available store methods. 
+
+- touch(sid, sess, cb)
+- all(cb)
+- length(cb)
+- clear(cb)
+- set(sid, sess, cb)
+- get(sid, cb)
+- destroy(sid, cb)

@@ -1,0 +1,134 @@
+{
+  "numTotalTestSuites": 2,
+  "numPassedTestSuites": 2,
+  "numFailedTestSuites": 0,
+  "numPendingTestSuites": 0,
+  "numTotalTests": 10,
+  "numPassedTests": 10,
+  "numFailedTests": 0,
+  "numPendingTests": 0,
+  "numTodoTests": 0,
+  "startTime": 1679014515036,
+  "success": true,
+  "testResults": [
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "",
+            "test store methods"
+          ],
+          "fullName": " test store methods all",
+          "status": "passed",
+          "title": "all",
+          "duration": 105,
+          "failureMessages": []
+        },
+        {
+          "ancestorTitles": [
+            "",
+            "test store methods"
+          ],
+          "fullName": " test store methods destroy",
+          "status": "passed",
+          "title": "destroy",
+          "duration": 31,
+          "failureMessages": []
+        },
+        {
+          "ancestorTitles": [
+            "",
+            "test store methods"
+          ],
+          "fullName": " test store methods set with expiry",
+          "status": "passed",
+          "title": "set with expiry",
+          "duration": 19,
+          "failureMessages": []
+        },
+        {
+          "ancestorTitles": [
+            "",
+            "test store methods"
+          ],
+          "fullName": " test store methods set with no expiry",
+          "status": "passed",
+          "title": "set with no expiry",
+          "duration": 44,
+          "failureMessages": []
+        },
+        {
+          "ancestorTitles": [
+            "",
+            "test store methods"
+          ],
+          "fullName": " test store methods get existing",
+          "status": "passed",
+          "title": "get existing",
+          "duration": 17,
+          "failureMessages": []
+        },
+        {
+          "ancestorTitles": [
+            "",
+            "test store methods"
+          ],
+          "fullName": " test store methods get non-existing",
+          "status": "passed",
+          "title": "get non-existing",
+          "duration": 22,
+          "failureMessages": []
+        },
+        {
+          "ancestorTitles": [
+            "",
+            "test store methods"
+          ],
+          "fullName": " test store methods clear",
+          "status": "passed",
+          "title": "clear",
+          "duration": 31,
+          "failureMessages": []
+        },
+        {
+          "ancestorTitles": [
+            "",
+            "test store methods"
+          ],
+          "fullName": " test store methods length",
+          "status": "passed",
+          "title": "length",
+          "duration": 29,
+          "failureMessages": []
+        },
+        {
+          "ancestorTitles": [
+            "",
+            "test store methods"
+          ],
+          "fullName": " test store methods touch",
+          "status": "passed",
+          "title": "touch",
+          "duration": 25,
+          "failureMessages": []
+        },
+        {
+          "ancestorTitles": [
+            "",
+            "test store methods"
+          ],
+          "fullName": " test store methods clears expired sessions",
+          "status": "passed",
+          "title": "clears expired sessions",
+          "duration": 4025,
+          "failureMessages": []
+        }
+      ],
+      "startTime": 1679014515834,
+      "endTime": 1679014520182,
+      "status": "passed",
+      "message": "",
+      "name": "/home/dev/Documents/github/npm/@duskim-express-store/src/main.vitest.js"
+    }
+  ]
+}

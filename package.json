@@ -1,24 +1,42 @@
 {
+  "author": "du kim",
   "name": "@duskim/express-store",
-  "version": "0.0.6",
-  "description": "express session store for sequelize/mariadb",
-  "main": "express-session-store.js",
+  "version": "0.1.1",
+  "license": "MIT",
+  "description": "MariaDB session store for express-session",
+  "main": "src/main.js",
+  "type": "module",
+  "homepage": "https://github.com/duskim/sequelize-mariadb-store#readme",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest --no-threads --config ./vitest.config.js --reporter verbose",
+    "build": "npx tsc --target es6",
+    "check": "prettier --check \"src/**/*.ts\"",
+    "format": "prettier --write  \"src/**/*.ts\"",
+    "lint": "eslint --ext .ts ./src"
   },
   "keywords": [
-    "mariadb",
-    "sequelize",
+    "MySQL",
+    "MariaDB",
+    "Sequelize",
     "express-session",
-    "session-store"
+    "express-session store",
+    "es6 modules",
+    "typescript"
   ],
-  "author": "du kim",
-  "license": "MIT",
   "devDependencies": {
-    "@sequelize/core": "^7.0.0-alpha.10",
-    "sequelize": "^6.28.0"
+    "@types/express-session": "^1.17.6",
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "@typescript-eslint/parser": "^5.55.0",
+    "eslint": "^8.36.0",
+    "express-session": "^1.17.3",
+    "jsdom": "^21.1.1",
+    "mariadb": "^3.1.0",
+    "prettier": "^2.8.4",
+    "sequelize": "^6.28.0",
+    "typescript": "^5.0.2",
+    "vitest": "^0.29.3"
   }
 }

@@ -1,6 +1,6 @@
-module.exports = async function (sequelize) {
-  const { DataTypes } = require("@sequelize/core");
+import { Sequelize, DataTypes } from "sequelize";
 
+export default async function (sequelize: Sequelize) {
   const Session = sequelize.define(
     "Session",
     {
@@ -23,4 +23,4 @@ module.exports = async function (sequelize) {
 
   await Session.sync({ alter: true });
   return Session;
-};
+}
