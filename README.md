@@ -36,8 +36,10 @@ Supports ES6-module or CJS modules
 ```
   import expressSession from "express-session"
   import MariaDBSessionStorage from "@duskim/express-store"
+
+  const SessionStore = MariaDBSessionStorage(expressSession.Store)
   
-  const sessStore = new MariaDBSessionStorage({
+  const sessStore = new SessionStore({
     client: sequelize
   });
 
