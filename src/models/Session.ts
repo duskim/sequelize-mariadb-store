@@ -1,3 +1,4 @@
+//@ts-ignore
 import { Sequelize, DataTypes } from "sequelize";
 
 export default async function (sequelize: Sequelize) {

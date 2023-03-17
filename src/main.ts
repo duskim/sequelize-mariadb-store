@@ -1,6 +1,7 @@
 //@ts-ignore
 import SessionModel from "./models/Session.ts";
 import type { SessionRow, Options, Callback } from "./main.d";
+//@ts-ignore
 import { Sequelize } from "sequelize";
 import session, { SessionData } from "express-session";
 

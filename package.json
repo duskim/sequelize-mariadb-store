@@ -1,7 +1,7 @@
 {
   "author": "du kim",
   "name": "@duskim/express-store",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "MIT",
   "description": "MariaDB session store for express-session",
   "main": "src/main.js",
@@ -12,7 +12,7 @@
   },
   "scripts": {
     "test": "vitest --no-threads --config ./vitest.config.js --reporter verbose",
-    "build": "npx tsc --target es6",
+    "build": "npx tsc",
     "check": "prettier --check \"src/**/*.ts\"",
     "format": "prettier --write  \"src/**/*.ts\"",
     "lint": "eslint --ext .ts ./src"
