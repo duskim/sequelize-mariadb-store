@@ -8,10 +8,10 @@ export type SessionRow = {
 };
 
 export interface Options {
-  client?: Sequelize;
-  ttl: number;
-  ttc: number;
-  disableTouch: boolean;
+  client: Sequelize;
+  ttl?: number;
+  ttc?: number;
+  disableTouch?: boolean;
 }
 
 export type Callback = (_err: any, _payload?: any) => void;
