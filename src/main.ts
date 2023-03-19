@@ -1,5 +1,4 @@
-//@ts-ignore
-import SessionModel from "./models/Session.ts";
+import SessionModel from "./models/Session.js";
 import type { SessionRow, Options, Callback } from "./main.d.js";
 //@ts-ignore
 import { Sequelize } from "sequelize";
