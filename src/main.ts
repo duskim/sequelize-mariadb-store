@@ -1,6 +1,6 @@
 //@ts-ignore
 import SessionModel from "./models/Session.ts";
-import type { SessionRow, Options, Callback } from "./main.d";
+import type { SessionRow, Options, Callback } from "./main.d.js";
 //@ts-ignore
 import { Sequelize } from "sequelize";
 import session, { SessionData } from "express-session";
@@ -216,7 +216,7 @@ export default function (Store: typeof session.Store) {
           const sessionData: SessionData = JSON.parse(sess);
 
           if (this._getTTLInMilli(sessionData) <= 0) {
-            this.destroy(sid, function (err) {
+            this.destroy(sid, function (err: any) {
               if (err) {
                 throw new Error(err.message);
               }
