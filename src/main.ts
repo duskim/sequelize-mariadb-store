@@ -1,8 +1,7 @@
 import SessionModel from "./models/Session.js";
 import type { SessionRow, Options, Callback } from "./main.d.js";
-//@ts-ignore
-import { Sequelize } from "sequelize";
 import session, { SessionData } from "express-session";
+import { Sequelize } from "@sequelize/core";
 
 const MODEL_NAME = "Session";
 const FIFTEEN_MINUTES = 1000 * 60 * 15;
@@ -104,7 +103,7 @@ export default function (Store: typeof session.Store) {
         });
 
         if (!session) {
-          return cb(new Error("Session not found"), undefined);
+          return cb(null, null);
         }
 
         const data: SessionData = JSON.parse(
@@ -187,7 +186,7 @@ export default function (Store: typeof session.Store) {
       try {
         await cb();
       } catch (err) {
-        cbError(err as Error);
+        cbError(err);
       }
     }
 

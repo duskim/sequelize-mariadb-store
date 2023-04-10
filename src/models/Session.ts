@@ -1,5 +1,4 @@
-//@ts-ignore
-import { Sequelize, DataTypes } from "sequelize";
+import { Sequelize, DataTypes } from "@sequelize/core";
 
 export default async function (sequelize: Sequelize) {
   const Session = sequelize.define(

@@ -102,7 +102,7 @@ export default function (Store) {
                         },
                     });
                     if (!session) {
-                        return cb(new Error("Session not found"), undefined);
+                        return cb(null, null);
                     }
                     const data = JSON.parse(session.sess);
                     cb(null, data);

@@ -7,8 +7,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-//@ts-ignore
-import { DataTypes } from "sequelize";
+import { DataTypes } from "@sequelize/core";
 export default function (sequelize) {
     return __awaiter(this, void 0, void 0, function* () {
         const Session = sequelize.define("Session", {
